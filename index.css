@@ -1,5 +1,11 @@
-#logo {
+#header {
     margin: 0;
+    background-color: white;
+    padding: 0;
+}
+
+.logo {
+    height: 300px;
 }
 
 .navbar.center .navbar-inner {
