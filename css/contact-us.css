@@ -1,0 +1,20 @@
+table {
+    border: 1px solid white; 
+}
+
+td > a {
+	color: white;
+	
+}
+
+td{
+	width: 33%;
+	text-align: left;
+}
+
+.email{
+	text-align: center;
+	color: white;
+}
+
+
