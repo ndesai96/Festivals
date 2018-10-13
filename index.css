@@ -17,3 +17,38 @@
     display:inline-block;
     vertical-align: middle;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    text-align: center;
+    width: 100%;
+    background-color: #3485AC;
+    color: white;
+    padding: 30px;
+}
+
+.festivals {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.festival_type {
+    text-align: center;
+    flex: 1;
+}
+
+.festival_type>img {
+    object-fit: cover;
+    width: 90%;   
+}
+
+.footer {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
