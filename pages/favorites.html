@@ -6,6 +6,8 @@
 
         <link rel="stylesheet" href="../css/navbar.css">
 
+        <link rel="stylesheet" href="../css/favorites.css">
+
         <link rel="stylesheet" href="../css/search.css">
 
         <link rel="stylesheet" href="../css/modal.css">
@@ -17,7 +19,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-
+    
     <body>
         
         <div id="header" class="jumbotron text-center">
@@ -27,9 +29,9 @@
             <div class="navbar-inner">
                 <ul class="nav navbar-nav">
                     <li><a href="../index.html">Home</a></li>
-                    <li class="active"><a href="">Search</a></li>
+                    <li><a href="./search.html">Search</a></li>
                     <li><a href="./about.html">About Us</a></li>
-                    <li><a href="./favorites.html">Favorites</a></li>
+                    <li class="active"><a href="">Favorites</a></li>
                     <li><a href="javascript:viewModalSignIn();">Sign In</a></li>
                     <li><a href="javascript:viewModalRegister();">Register</a></li>
                 </ul>
@@ -37,36 +39,8 @@
         </div>
 
         <div class="container">
-            <h1>Search</h1>
-            <form class="searchForm" method="post">
-                <select name="category">
-                    <option value="" selected>Any Category</option>
-                    <option value="art">Art</option>
-                    <option value="culture">Culture</option>
-                    <option value="history">History</option>
-                    <option value="film">Film</option>
-                    <option value="food">Food</option>
-                    <option value="music">Music</option>
-                </select>
-                <select name="region">
-                    <option value="" selected>Any Region</option>
-                    <option value="africa">Africa</option>
-                    <option value="asia">Asia</option>
-                    <option value="australia">Australia</option>
-                    <option value="europe">Europe</option>
-                    <option value="na">North America</option>
-                    <option value="sa">South America</option>
-                </select>
-                <select name="time">
-                    <option value="" selected>Any Season</option>
-                    <option value="spring">Spring</option>
-                    <option value="summer">Summer</option>
-                    <option value="fall">Fall</option>
-                    <option value="winter">Winter</option>
-                </select>
-                <input class="button searchBtn" type="submit" value="Search" />
-                <input class="button searchBtn" type="reset" value="Reset" />
-            </form>
+        
+            <h1>Your Favorites</h1>
 
             <div class="festivalCollection">
                 <div class="festivalCard">
@@ -161,6 +135,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="footer">
@@ -205,6 +180,7 @@
                 </div>
             </div>
         </div>
-
+        
     </body>
+
 </html>
