@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Festivals</title>
+
+        <link rel="stylesheet" href="../css/navbar.css">
+
+        <link rel="stylesheet" href="../css/search.css">
+
+        <link rel="stylesheet" href="../css/modal.css">
+        <script type="text/javascript" src="../js/modal.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <div id="header" class="jumbotron text-center">
+            <img class="logo" src="../img/logo.png">
+        </div>
+        <div class="navbar fixed-top navbar-default center">
+            <div class="navbar-inner">
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="">Search</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="">Favorites</a></li>
+                    <li><a href="javascript:viewModalSignIn();">Sign In</a></li>
+                    <li><a href="javascript:viewModalRegister();">Register</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <form class="searchForm" method="post">
+                <select name="category">
+                    <option value="" selected>Any Category</option>
+                    <option value="art">Art</option>
+                    <option value="culture">Culture</option>
+                    <option value="history">History</option>
+                    <option value="film">Film</option>
+                    <option value="food">Food</option>
+                    <option value="music">Music</option>
+                </select>
+                <select name="region">
+                    <option value="" selected>Any Region</option>
+                    <option value="africa">Africa</option>
+                    <option value="asia">Asia</option>
+                    <option value="australia">Australia</option>
+                    <option value="europe">Europe</option>
+                    <option value="na">North America</option>
+                    <option value="sa">South America</option>
+                </select>
+                <select name="time">
+                    <option value="" selected>Any Season</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                    <option value="winter">Winter</option>
+                </select>
+                <input class="button searchBtn" type="submit" value="Search" />
+                <input class="button searchBtn" type="reset" value="Reset" />
+            </form>
+
+            <div class="festivalCollection">
+                <div class="festivalCard">
+                    <div class="favorite">
+                        <img src="../img/favorite.png">
+                    </div>
+                    <div class="festivalImg">
+                        <img src="../img/acl.jpg">
+                    </div>
+                    <div class="festivalContent">
+                        <h2 class="festivalName">Austin City Limits</h2>
+                        <h4 class="festivalRegion">Austin, Texas</h4>
+                        <h4 class="festivalCategory">Music</h4>
+                        <div class="spacer"></div>
+                        <h4 class="festivalDates">October 4th, 2019 - October 13th, 2019</h4>
+                    </div>
+                </div>
+
+                <div class="festivalCard">
+                    <div class="favorite">
+                        <img src="../img/favorite.png">
+                    </div>
+                    <div class="festivalImg">
+                        <img src="../img/holi.jpg">
+                    </div>
+
+                    <div class="festivalContent">
+                        <h2 class="festivalName">Holi</h2>
+                        <h4 class="festivalRegion">Mathura, India</h4>
+                        <h4 class="festivalCategory">Culture</h4>
+                        <div class="spacer"></div>
+                        <h4 class="festivalDates">March 20th, 2019 - March 21st, 2019</h4>
+                    </div>
+                </div>
+
+                <div class="festivalCard">
+                    <div class="favorite">
+                        <img src="../img/favorite.png">
+                    </div>
+                    <div class="festivalImg">
+                        <img src="../img/pizzafest.png">
+                    </div>
+
+                    <div class="festivalContent">
+                        <h2 class="festivalName">Pizzafest</h2>
+                        <h4 class="festivalRegion">Naples, Italy</h4>
+                        <h4 class="festivalCategory">Food</h4>
+                    </div>
+                </div>
+
+                <div class="festivalCard">
+                    <div class="favorite">
+                        <img src="../img/favorite.png">
+                    </div>
+                    <div class="festivalImg">
+                        <img src="../img/cannes.jpg">
+                    </div>
+
+                    <div class="festivalContent">
+                        <h2 class="festivalName">Cannes Film Festival</h2>
+                        <h4 class="festivalRegion">Cannes, France</h4>
+                        <h4 class="festivalCategory">Film</h4>
+                    </div>
+                </div>
+
+                <div class="festivalCard">
+                    <div class="favorite">
+                        <img src="../img/favorite.png">
+                    </div>
+                    <div class="festivalImg">
+                        <img src="../img/vivid.jpg">
+                    </div>
+
+                    <div class="festivalContent">
+                        <h2 class="festivalName">Vivid Sydney</h2>
+                        <h4 class="festivalRegion">Sydney, Australia</h4>
+                        <h4 class="festivalCategory">Music</h4>
+                    </div>
+                </div>
+
+                <div class="festivalCard">
+                    <div class="favorite">
+                        <img src="../img/favorite.png">
+                    </div>
+                    <div class="festivalImg">
+                        <img src="../img/vienna.jpg">
+                    </div>
+                    <div class="festivalContent">
+                        <h2 class="festivalName">Wiener Festwochen</h2>
+                        <h4 class="festivalRegion">Vienna, Austria</h4>
+                        <h4 class="festivalCategory">Culture</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="popup">
+            <div class="card">
+                <div onclick="exitModal();" class="close" title="Close Modal">&times;</div>
+                <div class="content">
+                    <div class="signin active" id="signin">
+                        <h2>Sign in to Festival Finder</h2>
+                        <form class="siginForm" method="post">
+                            <input class="textField" name="user" type="text" size="30" id="user" placeholder="Username" />
+                            <input class="textField" name="pass" type="password" size="30" id="pass" placeholder="Password" />
+                            <div class="buttons">
+                                <input class="button" type="submit" value="Sign In" />
+                                <input class="button" type="reset" value="Clear" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="register" id="register">
+                        <h2>Register with Festival Finder</h2>
+                        <form class="registerForm" method="post">
+                            <input class="textField" name="user" type="text" size="30" id="user" placeholder="Username" />
+                            <input class="textField" name="pass" type="password" size="30" id="pass" placeholder="Password" />
+                            <input class="textField" name="confrimPass" type="password" size="30" id="confrimPass" placeholder="Confirm Password" />
+                            <div class="buttons">
+                                <input class="button" type="submit" value="Register" />
+                                <input class="button" type="reset" value="Clear" />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="divider"></div>
+                    <p class="noAccount active" id="noAccount">Don't have an account? <a href="javascript:viewRegister();">Sign Up</a></p>
+                    <p class="haveAccount" id="haveAccount">Already have an account? <a href="javascript:viewSignIn();">Sign in</a></p>
+                </div>
+                <div class="footer">
+                    <button class="cancel button" onclick="exitModal();">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

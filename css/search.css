@@ -1,0 +1,62 @@
+.searchForm {
+	margin: 20px auto;
+	text-align: center;
+}
+
+.searchForm>select {
+	margin: 0 10px;
+}
+
+.searchBtn {
+  width: 100px;
+  margin: 0 10px;
+}
+
+.festivalCard {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);	
+	display: flex;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.favorite {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+}
+
+.favorite>img {
+	max-width: 100%;
+}
+
+.festivalImg {
+	width: 40%;
+	height: 200px;
+}
+
+.festivalImg>img {
+	height: 100%;
+	max-width: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.festivalContent {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.spacer {
+	flex-grow: 1;
+}
+
+.festivalName, .festivalRegion, .festivalCategory {
+	margin: 10px 0 0 15px;
+}
+
+.festivalDates {
+	margin: 0 0 10px 15px;
+}
