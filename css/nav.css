@@ -48,11 +48,39 @@ body {
 	height: 100%;
 }
 
+.logout {
+	display: flex;
+	align-items: center;
+}
+
 .hello {
 	width: 100%;
 	padding: 0 20px;
 	display: flex;
 	align-items: center;
+}
+
+.logoutForm {
+	margin: 0;
+	padding: 0;
+
+}
+
+.logoutButton {
+	border: none;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0 20px;
+	width: 100%;
+	height: 100%;
+	color: #3485AC !important;
+	background-color: white !important;
+}
+
+.logoutButton:hover {
+	background-color: #3485AC !important;
+	color: white !important;
 }
 
 .nav-links a, .nav-login a {

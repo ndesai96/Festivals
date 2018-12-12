@@ -9,6 +9,10 @@
 		$_SESSION["logged_in"] = "true";
 	}
 
+	else if (isset($_POST["logoutButton"])) {
+		$_SESSION["logged_in"] = "false";
+	}
+
 	writeTop();
 
 	if ($_SESSION["logged_in"] == "true") {
@@ -34,7 +38,7 @@
 		<link rel="stylesheet" href="./css/modal.css">
 		<script type="text/javascript" src="./js/modal.js"></script>
 
-		<link rel="stylesheet" href="./css/navbar.css">
+		<link rel="stylesheet" href="./css/nav.css">
 
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 

@@ -25,9 +25,9 @@
 
             <div class="nav-login">
 
-                <ul>
-                    <li><a href="">Hi, username!</a></li>
-                    <li><a href="">Log Out</a></li>
+                <ul class="logout">
+                    <li class="hello">Hi, username!</li>
+                    <li><form id="logoutForm" class="logoutForm" method="post"><input class="logoutButton" name="logoutButton" type="submit" value="Log Out" /></form></li>
                 </ul>
 
             </div>
