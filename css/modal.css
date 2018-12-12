@@ -18,7 +18,7 @@ body {
   animation: fadein 0.6s;
 }
 
-.active {
+.show-form {
   display: block !important;
 }
 
@@ -26,10 +26,10 @@ body {
   background-color: #fefefe;
   max-width: 500px;
   width: 80%;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
   padding-top: 10px;
-  overflow: scroll;
+  
 }
 
 .close {
@@ -52,7 +52,7 @@ body {
   margin: 10px auto;
 }
 
-.signin, .register {
+.login, .register {
   width: 100%;
   margin-bottom: 40px;
   display: none;
@@ -60,7 +60,7 @@ body {
   animation: fadein 0.6s;
 }
 
-.signinForm, .registerForm {
+.loginForm, .registerForm {
   width: 100%;
 }
 
@@ -114,6 +114,7 @@ input[type=reset] {
   color: #3485AC;
   border: 1px solid #3485AC;
   flex: 0 1 48%;
+  background-color: #f1f1f1;
 }
 
 input[type=reset]:hover {
@@ -122,10 +123,17 @@ input[type=reset]:hover {
   background-color: #ADCEDD;
 }
 
+.error {
+  color: red;
+  margin-bottom: 20px;
+}
+
 .footer {
   background-color: #f1f1f1;
-  max-width: 100%;
+  width: 100%;
   padding: 10px 20px;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 .cancel {

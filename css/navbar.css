@@ -1,19 +1,88 @@
-#header {
-    margin: 0;
-    background-color: white;
-    padding: 0;
+body {
+	padding-top: 80px;
+}
+
+.nav-custom {
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	font-size: 17px;
+	border-bottom: 1px solid #3485AC;
+	color: #3485AC !important;
 }
 
 .logo {
-    height: 150px;
+	height: 100%;
+	padding: 5px;
+	margin-right: 10px;
 }
 
-.navbar.center .navbar-inner {
-    text-align: center;
+.logo img {
+	max-height: 100%;
+	height: 100%;
 }
 
-.navbar.center .navbar-inner .nav {
-    float: none;
-    display:inline-block;
-    vertical-align: middle;
+.nav-links, .nav-login {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.nav-links ul, .nav-login ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.nav-links li, .nav-login li {
+	text-decoration: none;
+	height: 100%;
+}
+
+.hello {
+	width: 100%;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+}
+
+.nav-links a, .nav-login a {
+	height: 100%;
+	width: 100%;
+	padding: 0 20px;
+	display: flex;
+	align-items: center;
+	color: #3485AC;
+}
+
+.nav-links a:hover, .nav-login a:hover {
+	text-decoration: none;
+	color: white;
+	background-color: #3485AC;
+}
+
+.nav-links a:active, .nav-login a:active {
+	text-decoration: none;
+}
+
+.nav-links a:visited, .nav-login a:visited {
+	text-decoration: none;
+}
+
+.nav-link-active {
+	background-color: #3485AC;
+	color: white;
+}
+
+.nav-spacer {
+	flex: 1;
 }
