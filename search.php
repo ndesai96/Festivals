@@ -11,6 +11,84 @@
 	writeSearch();
 	writeBottom();
 
+	function writeSearch() {
+
+		print <<<SEARCH
+		<div class="container">
+			<h1>Search</h1>		
+SEARCH;
+
+		writeSearchForm();
+
+		print <<<COLLECTION
+			<div class="festivalCollection">
+COLLECTION;
+
+		if (isset($_POST["searchBtn"])) {
+			$val = array();
+			
+			echo "Showing all ";
+
+			$category = $_POST["category"];
+			if ($category != "") {
+				$val[] = "category='".$category."'";
+				echo $category." ";
+			}
+
+			echo "Festivals ";
+
+			$region = $_POST["region"];
+			if ($region != "") {
+				$val[] = "continent='".$region."'";
+				echo "in ".$region." ";
+			}
+
+			$season = $_POST["season"];
+			if ($season != "") {
+				$val[] = "season='".$season."'";
+				echo "during ".$season;
+			}
+
+			echo "<br>";
+			echo "<br>";
+
+			$val = implode(',', $val);
+			if ($val != "") {
+				$val = " WHERE ".$val;
+			}
+
+			$festivals = retrieveSome($val);
+		}
+
+		else {
+			$festivals = retrieveAll();
+		}
+
+		writeFestivals($festivals);
+
+		print <<<BOTTOM
+			</div>
+		</div>
+BOTTOM;
+
+	}
+
+	function retrieveSome($val) {
+
+		$connect = connectDB();
+		$sql = "SELECT name, city, country, category, startDate, endDate, images FROM festivals".$val." ORDER BY name";
+		$result = mysqli_query($connect, $sql);
+		mysqli_close($connect);
+		$rows = array();
+		while($r = mysqli_fetch_assoc($result)) {
+    		$rows[] = $r;
+		}
+
+		return $rows;
+
+	}
+
+
 	function retrieveAll() {
 
 		$connect = connectDB();
@@ -26,20 +104,7 @@
 
 	}
 
-	function writeSearch() {
-
-		print <<<SEARCH
-		<div class="container">
-			<h1>Search</h1>		
-SEARCH;
-
-		writeSearchForm();
-
-		print <<<COLLECTION
-			<div class="festivalCollection">
-COLLECTION;
-
-		$festivals = retrieveAll();
+	function writeFestivals($festivals) {
 		
 		foreach ($festivals as $festival) {
 			$name = $festival['name'];
@@ -58,12 +123,6 @@ COLLECTION;
 
 			writeFestivalCard($name, $city, $country, $category, $startDate, $endDate, $images[0]);
 		}
-
-		print <<<BOTTOM
-			</div>
-		</div>
-BOTTOM;
-
 	}
 
 	function writeFestivalCard($name, $city, $country, $category, $startDate, $endDate, $image) {
@@ -116,30 +175,30 @@ CARD;
 			<form class="searchForm" method="post">
                 <select name="category">
                     <option value="" selected>Any Category</option>
-                    <option value="art">Art</option>
-                    <option value="culture">Culture</option>
-                    <option value="history">History</option>
-                    <option value="film">Film</option>
-                    <option value="food">Food</option>
-                    <option value="music">Music</option>
+                    <option value="Art">Art</option>
+                    <option value="Culture">Culture</option>
+                    <option value="History">History</option>
+                    <option value="Film">Film</option>
+                    <option value="Food">Food</option>
+                    <option value="Music">Music</option>
                 </select>
                 <select name="region">
                     <option value="" selected>Any Region</option>
-                    <option value="africa">Africa</option>
-                    <option value="asia">Asia</option>
-                    <option value="australia">Australia</option>
-                    <option value="europe">Europe</option>
-                    <option value="na">North America</option>
-                    <option value="sa">South America</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
                 </select>
-                <select name="time">
+                <select name="season">
                     <option value="" selected>Any Season</option>
-                    <option value="spring">Spring</option>
-                    <option value="summer">Summer</option>
-                    <option value="fall">Fall</option>
-                    <option value="winter">Winter</option>
+                    <option value="Spring">Spring</option>
+                    <option value="Summer">Summer</option>
+                    <option value="Fall">Fall</option>
+                    <option value="Winter">Winter</option>
                 </select>
-                <input class="button searchBtn" type="submit" value="Search" />
+                <input name="searchBtn" class="button searchBtn" type="submit" value="Search" />
                 <input class="button searchBtn" type="reset" value="Reset" />
             </form>
 
