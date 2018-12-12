@@ -7,16 +7,18 @@
 
 	if (isset($_POST["user"])) {
 		$_SESSION["logged_in"] = "true";
+		$_SESSION["user"] = $_POST["user"];
 	}
 
 	else if (isset($_POST["logoutButton"])) {
 		$_SESSION["logged_in"] = "false";
+		session_destroy();
 	}
 
 	writeTop();
 
 	if ($_SESSION["logged_in"] == "true") {
-		writeNav("true");
+		writeNav($_SESSION["user"]);
 	}
 
 	else {

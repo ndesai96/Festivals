@@ -1,8 +1,8 @@
 <?php
 
-	function writeNav($loggedin) {
+	function writeNav($user) {
 
-		if ($loggedin == "true") {
+		if ($user != "false") {
 			print <<<NAV
 
 		<div class="nav-custom">
@@ -26,7 +26,7 @@
             <div class="nav-login">
 
                 <ul class="logout">
-                    <li class="hello">Hi, username!</li>
+                    <li class="hello">Hi, $user!</li>
                     <li><form id="logoutForm" class="logoutForm" method="post"><input class="logoutButton" name="logoutButton" type="submit" value="Log Out" /></form></li>
                 </ul>
 
