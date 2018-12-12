@@ -10,6 +10,7 @@
 	font-size: 17px;
 	border-bottom: 1px solid #3485AC;
 	color: #3485AC !important;
+	z-index: 100;
 }
 
 .logo {

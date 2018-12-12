@@ -5,6 +5,10 @@ body {
   position: relative;
 }
 
+.container {
+    z-index: -1 !important;
+}
+
 .index-page {
     display: flex;
     flex-direction: column;

@@ -14,14 +14,15 @@
 	function retrieveAll() {
 
 		$connect = connectDB();
-		$sql = "select * from festivals LIMIT 10";
+		$sql = "SELECT name, city, country, category, startDate, endDate, images FROM festivals ORDER BY name";
 		$result = mysqli_query($connect, $sql);
 		mysqli_close($connect);
 		$rows = array();
 		while($r = mysqli_fetch_assoc($result)) {
     		$rows[] = $r;
 		}
-		return json_encode($rows);
+
+		return $rows;
 
 	}
 
@@ -38,14 +39,25 @@ SEARCH;
 			<div class="festivalCollection">
 COLLECTION;
 
-		// $json = retrieveAll();
+		$festivals = retrieveAll();
+		
+		foreach ($festivals as $festival) {
+			$name = $festival['name'];
+			$city = $festival['city'];
+			$country = $festival['country'];
+			$category = $festival['category'];
+			
+			$startDate = $festival['startDate'];
+			$endDate = $festival['endDate'];
+			$startDate = date_create_from_format('n/j/y', $startDate);
+			$startDate = date_format($startDate,"F j, Y");
+			$endDate = date_create_from_format('n/j/y', $endDate);
+			$endDate = date_format($endDate,"F j, Y");
+			
+			$images = explode(',', $festival['images']);
 
-		// foreach ($json as $festival) {
-		// 	echo $festival->name;
-		// }
-
-		writeFestivalCard();
-		writeFestivalCard();
+			writeFestivalCard($name, $city, $country, $category, $startDate, $endDate, $images[0]);
+		}
 
 		print <<<BOTTOM
 			</div>
@@ -54,24 +66,24 @@ BOTTOM;
 
 	}
 
-	function writeFestivalCard() {
+	function writeFestivalCard($name, $city, $country, $category, $startDate, $endDate, $image) {
 
 
 		print <<<CARD
 
 				<div class="festivalCard">
 	                <div class="favorite">
-	                    <img src="../img/favorite.png">
+	                    <img src="./img/favorite.png">
 	                </div>
 	                <div class="festivalImg">
-	                    <a href=""><img src="../img/acl-1.jpg"></a>
+	                    <a href=""><img src="./img/$image"></a>
 	                </div>
 	                <div class="festivalContent">
-	                    <h2 class="festivalName">Austin City Limits</h2>
-	                    <h4 class="festivalRegion">Austin, Texas</h4>
-	                    <h4 class="festivalCategory">Music</h4>
+	                    <h2 class="festivalName">$name</h2>
+	                    <h4 class="festivalRegion">$city, $country</h4>
+	                    <h4 class="festivalCategory">$category</h4>
 	                    <div class="spacer"></div>
-	                    <h4 class="festivalDates">October 4th, 2019 - October 13th, 2019</h4>
+	                    <h4 class="festivalDates">$startDate - $endDate</h4>
 	                </div>
 	            </div>
 
