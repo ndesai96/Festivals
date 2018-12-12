@@ -52,7 +52,15 @@ HEAD;
 
 	function writeBottom() {
 
+		$date = date("F d, Y", time());
+
 		print <<<BOTTOM
+	
+		<div class="footer">
+            <div class="footer-copyright text-center py-3">
+                &copy; $date Copyright: Neil Desai, Aparna Kakarlapudi, Nabeel Masood
+            </div>
+        </div>
 	</body>
 </html>
 BOTTOM;

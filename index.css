@@ -1,9 +1,11 @@
 body {
   font-family: 'Open Sans', sans-serif !important;
   padding-top: 60px;
+  padding-bottom: 120px;
+  position: relative;
 }
 
-.container {
+.index {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,25 +17,28 @@ body {
     background-color: #3485AC;
     color: white;
     padding: 30px;
+    margin-top: 20px;
 }
 
-.festivals {
+.index-festivals {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.festival_type {
+.index-festival-type {
     text-align: center;
     flex: 0 1 32%;
 }
 
-.festival_type>img {
+.index-festival-type>img {
     object-fit: cover;
     width: 100%;   
 }
 
 .footer {
-    margin-top: 50px;
-    margin-bottom: 10px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
 }
