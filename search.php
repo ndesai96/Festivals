@@ -35,7 +35,7 @@ COLLECTION;
 				echo $category." ";
 			}
 
-			echo "Festivals ";
+			echo "festivals ";
 
 			$region = $_POST["region"];
 			if ($region != "") {
@@ -181,6 +181,7 @@ CARD;
                     <option value="Film">Film</option>
                     <option value="Food">Food</option>
                     <option value="Music">Music</option>
+                    <option value="Sports">Sports</option>
                 </select>
                 <select name="region">
                     <option value="" selected>Any Region</option>
