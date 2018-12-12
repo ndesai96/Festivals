@@ -1,10 +1,24 @@
 <?php
+	
+	session_start();
 
 	include './nav/nav.php';
 	include './modal/modal.php';
 
+	if (isset($_POST["user"])) {
+		$_SESSION["logged_in"] = "true";
+	}
+
 	writeTop();
-	writeNav("false");
+
+	if ($_SESSION["logged_in"] == "true") {
+		writeNav("true");
+	}
+
+	else {
+		writeNav("false");
+	}
+	
 	writeModal();
 	writeBottom();
 

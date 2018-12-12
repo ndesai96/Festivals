@@ -36,8 +36,15 @@ function responseLogin() {
 	if (xhr.readyState == 4) { 
         if (xhr.status == 200) { 
             var response = xhr.responseText;
-            var form = document.getElementById("loginForm");
-            form.user.value = response;
+            
+            if (response == "false") {
+            	document.getElementById('errorLogin').innerHTML = "Username and password was incorrect";
+            }
+
+            else {
+            	window.alert("Log In Successful");
+            	document.getElementById("loginForm").submit();
+            }          
         }
     }
 }
@@ -75,8 +82,15 @@ function responseRegister() {
 	if (xhr.readyState == 4) { 
         if (xhr.status == 200) { 
             var response = xhr.responseText;
-            var form = document.getElementById("registerForm");
-            form.user.value = response;
+            
+            if (response == "false") {
+            	document.getElementById('errorRegister').innerHTML = "Username is already taken";
+            }
+
+            else {
+            	window.alert("Registration Successful");
+            	document.getElementById("registerForm").submit();
+            } 
         }
     }
 }
