@@ -8,20 +8,20 @@
 
 	writeHead();
 	writeBody();
-	writeIndex();
+	writeFestival();
 	writeBottom();
 
-	function writeIndex() {
+	function writeFestival() {
 
-		print <<<INDEX
+		print <<<FESTIVAL
 
 		<div class="container">
-			<h1>Index</h1>
+			<h1>Festival</h1>
 
 
 		</div>
 
-INDEX;
+FESTIVAL;
 
 	}
 	

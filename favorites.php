@@ -8,20 +8,20 @@
 
 	writeHead();
 	writeBody();
-	writeIndex();
+	writeFavorites();
 	writeBottom();
 
-	function writeIndex() {
+	function writeFavorites() {
 
-		print <<<INDEX
+		print <<<FAVORITES
 
 		<div class="container">
-			<h1>Index</h1>
+			<h1>Favorites</h1>
 
 
 		</div>
 
-INDEX;
+FAVORITES;
 
 	}
 	

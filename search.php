@@ -8,20 +8,20 @@
 
 	writeHead();
 	writeBody();
-	writeIndex();
+	writeSearch();
 	writeBottom();
 
-	function writeIndex() {
+	function writeSearch() {
 
-		print <<<INDEX
+		print <<<SEARCH
 
 		<div class="container">
-			<h1>Index</h1>
+			<h1>Search</h1>
 
 
 		</div>
 
-INDEX;
+SEARCH;
 
 	}
 	

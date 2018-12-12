@@ -8,20 +8,20 @@
 
 	writeHead();
 	writeBody();
-	writeIndex();
+	writeAbout();
 	writeBottom();
 
-	function writeIndex() {
+	function writeAbout() {
 
-		print <<<INDEX
+		print <<<ABOUT
 
 		<div class="container">
-			<h1>Index</h1>
+			<h1>About Us</h1>
 
 
 		</div>
 
-INDEX;
+ABOUT;
 
 	}
 	

@@ -8,15 +8,15 @@
 		<div class="nav-custom">
 
             <div class="logo">
-                <a href=""><img class="logo" src="img/logo-2.png"></a>
+                <a href="./index.php"><img class="logo" src="img/logo-2.png"></a>
             </div>
 
             <div class="nav-links">
 
                 <ul>
-                    <li><a href="./pages/search.html">Search</a></li>
-                    <li><a href="./pages/favorites.html">Favorites</a></li>
-                    <li><a href="./pages/about.html">About Us</a></li>
+                    <li><a href="./search.php">Search</a></li>
+                    <li><a href="./favorites.php">Favorites</a></li>
+                    <li><a href="./about-us.php">About Us</a></li>
                 </ul>
 
             </div>
@@ -43,15 +43,15 @@ NAV;
 		<div class="nav-custom">
 
             <div class="logo">
-                <a href=""><img class="logo" src="img/logo-2.png"></a>
+                <a href="./index.php"><img class="logo" src="img/logo-2.png"></a>
             </div>
 
             <div class="nav-links">
 
                 <ul>
-                    <li><a href="./pages/search.html">Search</a></li>
-                    <li><a href="./pages/favorites.html">Favorites</a></li>
-                    <li><a href="./pages/about.html">About Us</a></li>
+                    <li><a href="./search.php">Search</a></li>
+                    <li><a href="./favorites.php">Favorites</a></li>
+                    <li><a href="./about-us.php">About Us</a></li>
                 </ul>
 
             </div>
