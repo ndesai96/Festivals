@@ -56,8 +56,8 @@ HEAD;
 
 		print <<<BOTTOM
 	
-		<div class="footer">
-            <div class="footer-copyright text-center py-3">
+		<div class="general-footer">
+            <div>
                 &copy; $date Copyright: Neil Desai, Aparna Kakarlapudi, Nabeel Masood
             </div>
         </div>

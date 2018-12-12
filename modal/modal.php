@@ -36,8 +36,10 @@
 	                    <p class="noAccount show-form" id="noAccount">Don't have an account? <a href="javascript:viewRegister();">Register</a></p>
 	                    <p class="haveAccount" id="haveAccount">Already have an account? <a href="javascript:viewSignIn();">Log in</a></p>
 	                </div>
-	                <div class="footer">
-	                    <button class="cancel button" onclick="exitModal();">Cancel</button>
+	                <div class="modal-cancel-footer">
+	                    <div class="modal-cancel-holder">
+	                    	<button class="cancel button" onclick="exitModal();">Cancel</button>
+	                    </div>
 	                </div>
 	            </div>
 	        </div>

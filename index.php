@@ -15,7 +15,7 @@
 
 		print <<<INDEX
 
-		<div class="container index">
+		<div class="container index-page">
 
 			<div class="description">
             
