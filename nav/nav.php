@@ -15,7 +15,7 @@
 
                 <ul>
                     <li><a href="./search.php">Search</a></li>
-                    <li><a href="./favorites.php">Favorites</a></li>
+                    
                     <li><a href="./about-us.php">About Us</a></li>
                 </ul>
 
@@ -50,7 +50,7 @@ NAV;
 
                 <ul>
                     <li><a href="./search.php">Search</a></li>
-                    <li><a href="./favorites.php">Favorites</a></li>
+                    
                     <li><a href="./about-us.php">About Us</a></li>
                 </ul>
 

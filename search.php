@@ -129,9 +129,7 @@ BOTTOM;
 		print <<<CARD
 
 				<div class="festivalCard">
-	                <div class="favorite">
-	                    <img src="./img/favorite.png">
-	                </div>
+	                
 	                <div class="festivalImg">
 	                    <a href="./festival.php?festival=$name"><img src="./img/$image"></a>
 	                </div>
