@@ -1,5 +1,6 @@
 table {
     border: 1px solid white; 
+    margin-top: 30px;
 }
 
 td > a {
@@ -7,9 +8,19 @@ td > a {
 	
 }
 
-td{
+.name-title, .bio {
 	width: 33%;
 	text-align: left;
+}
+
+.profilepic {
+	width: 33%;
+	text-align: right;
+}
+
+.profilepic>img {
+	width: 200px;
+	height: 200px;
 }
 
 .email{

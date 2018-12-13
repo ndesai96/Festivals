@@ -34,6 +34,7 @@
 		<link rel="stylesheet" href="./index.css">
 		<link rel="stylesheet" href="./css/search.css">
 		<link rel="stylesheet" href="./css/festival.css">
+		<link rel="stylesheet" href="./css/about-us.css">
 
 		<link rel="stylesheet" href="./css/modal.css">
 		<script type="text/javascript" src="./js/modal.js"></script>
