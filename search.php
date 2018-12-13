@@ -88,7 +88,6 @@ BOTTOM;
 
 	}
 
-
 	function retrieveAll() {
 
 		$connect = connectDB();

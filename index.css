@@ -40,6 +40,19 @@ body {
     width: 100%;   
 }
 
+.festival-videos {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+iframe {
+    flex: 0 1 48%;
+    height: 300px;
+}
+
 .general-footer {
     bottom: 0 !important;
     position: absolute;
