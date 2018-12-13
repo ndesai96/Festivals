@@ -127,7 +127,6 @@ BOTTOM;
 
 	function writeFestivalCard($name, $city, $country, $category, $startDate, $endDate, $image) {
 
-
 		print <<<CARD
 
 				<div class="festivalCard">
@@ -135,7 +134,7 @@ BOTTOM;
 	                    <img src="./img/favorite.png">
 	                </div>
 	                <div class="festivalImg">
-	                    <a href=""><img src="./img/$image"></a>
+	                    <a href="./festival.php?festival=$name"><img src="./img/$image"></a>
 	                </div>
 	                <div class="festivalContent">
 	                    <h2 class="festivalName">$name</h2>
@@ -149,24 +148,6 @@ BOTTOM;
 CARD;
 
 	}   
-/*
-<div class="festivalCard">
-    <div class="favorite">
-        <img src="../img/favorite.png">
-    </div>
-    <div class="festivalImg">
-        <a href=""><img src="../img/holi-1.jpg"></a>
-    </div>
-
-    <div class="festivalContent">
-        <h2 class="festivalName">Holi</h2>
-        <h4 class="festivalRegion">Mathura, India</h4>
-        <h4 class="festivalCategory">Culture</h4>
-        <div class="spacer"></div>
-        <h4 class="festivalDates">March 20th, 2019 - March 21st, 2019</h4>
-    </div>
-</div>
-*/
 
 	function writeSearchForm() {
 

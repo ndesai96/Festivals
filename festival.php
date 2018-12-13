@@ -13,10 +13,12 @@
 
 	function writeFestival() {
 
+		$festival = $_GET['festival'];
+
 		print <<<FESTIVAL
 
 		<div class="container">
-			<h1>Festival</h1>
+			<h1>$festival</h1>
 
 
 		</div>
